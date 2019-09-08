@@ -20,6 +20,7 @@ RUN set -x \
   && apk del --no-cache freetype-dev libpng-dev libjpeg-turbo-dev
 
 WORKDIR /var/www/html
+VOLUME /var/www/html/data/User/admin/home/
 
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod a+x /usr/local/bin/entrypoint.sh
